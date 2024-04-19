@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #02010a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.5em;
+  color: #386641;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: #386641;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.form-input,
+.form-input-textarea {
+  width: 96%;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-input-textarea {
+  resize: vertical;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.redact-btn {
+  background-color: #bc4749;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.redact-btn:hover {
+  background-color: #9e393b;
+}
+
+.reset-btn {
+  background-color: #02010a;
+  color: #fff;
+}
+
+.reset-btn:hover {
+  background-color: #222;
+}
+
+.redacted-content {
+  margin-top: 40px;
+}
+
+.redacted-title {
+  font-size: 2em;
+}
+
+.redacted-text {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.status-title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.counts {
+  font-weight: bold;
+}
+
+/* Additional styling for the custom word input field container */
+#customWordContainer {
+  display: none;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="scr/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="main-title">REDACTR</h1>
+      <p class="subtitle">
+        ...SCRAMBLE SOME WORDS FROM A BODY OF TEXT CONTENT.
+      </p>
+      <form class="form-container" id="redactForm">
+        <div class="form-group">
+          <label class="form-label" for="content">Enter your content:</label>
+          <textarea
+            class="form-input-textarea"
+            id="content"
+            rows="5"
+            cols="40"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="redactWords"
+            >Words to be redacted (separated by spaces):</label
+          >
+          <input class="form-input" type="text" id="redactWords" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="replacement"
+            >Choose a replacement:</label
+          >
+          <select class="form-input" id="replacement">
+            <option value="***">Asterisks</option>
+            <option value="???">Question Marks</option>
+            <option value="---">Dashes</option>
+            <option value="___">Underscores</option>
+            <option value="REDACTED">Custom Word (e.g., "REDACTED")</option>
+          </select>
+        </div>
+
+        <!-- Custom word input field container -->
+        <div class="form-group" id="customWordContainer" style="display: none">
+          <label class="form-label" for="customWordInput"
+            >Enter custom word:</label
+          >
+          <input class="form-input" type="text" id="customWordInput" />
+        </div>
+
+        <button
+          class="action-btn redact-btn"
+          type="button"
+          onclick="redactContent()"
+        >
+          Redact Now
+        </button>
+        <button
+          class="action-btn reset-btn"
+          type="button"
+          onclick="resetForm()"
+        >
+          Reset Form
+        </button>
+      </form>
+
+      <div class="redacted-content" id="redacted-content">
+        <h2 class="redacted-title">Redacted Content</h2>
+        <p id="redacted-text" class="redacted-text"></p>
+        <p class="status-title">Status:</p>
+        <p id="stats">
+          Words scanned: <span id="words-scanned" class="counts">0</span>, Words
+          redacted: <span id="words-redacted" class="counts">0</span>,
+          Characters redacted:
+          <span id="characters-redacted" class="counts">0</span>, Time taken:
+          <span id="time-taken" class="counts">0</span> seconds
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
